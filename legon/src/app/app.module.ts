@@ -8,12 +8,14 @@ import { HeaderComponent } from './shared/header/header.component';
 import { MaterialModule } from './material.module';
 import { FormsModule } from '@angular/forms';
 import { CalculatorComponent } from './pages/calculator/calculator.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
