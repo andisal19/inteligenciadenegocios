@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-header',
   template: `<mat-toolbar color="primary">
-  <span>Inteligencia de negocios</span>
+    <h2 class="text-center">Legon telecomunicaciones.</h2>
 </mat-toolbar>`,
   styleUrls: ['./header.component.scss']
 })

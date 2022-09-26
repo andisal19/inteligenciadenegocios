@@ -1,0 +1,29 @@
+<h2 class="titulos">Lista de reportes de fallas</h2>
+<div class="datagrid">
+<table>
+    <thead>
+        <tr>
+            
+            <th>zona</th>
+            <th>cliente</th>
+            <th>prioridad</th>
+            <th>falla</th>
+            <th>fecha de creacion</th>
+            <th>fecha de cierre</th>
+            <th>tiempo total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="alt" *ngFor="let falla of Fallas">
+            <td>{{falla.zona}}</td>
+            <td>{{falla.cliente}}</td>
+            <td>{{falla.prioridad}}</td>
+            <td>{{falla.falla}}</td>
+            <td>{{falla.fecha_de_creacion}}</td>
+            <td>{{falla.fecha_de_cierre}}</td>
+            <td>{{falla.tiempo_total}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>

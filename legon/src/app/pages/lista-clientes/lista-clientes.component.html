@@ -1,0 +1,26 @@
+<h2 class="titulos">Lista de clientes</h2>
+<div class="datagrid">
+<table>
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>zona</th>
+            <th>ciudad</th>
+            <th>servicio</th>
+            <th>medio</th>
+            <th>fecha de afiliacion</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="alt" *ngFor="let cliente of clientes">
+            <td>{{cliente.nombre}}</td>
+            <td>{{cliente.zona}}</td>
+            <td>{{cliente.ciudad}}</td>
+            <td>{{cliente.servicio}}</td>
+            <td>{{cliente.medio}}</td>
+            <td>{{cliente.fecha_de_afliliacion}}</td>
+        </tr>
+    </tbody>
+</table>
+
+</div>
