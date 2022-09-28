@@ -12,6 +12,8 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { ListaClientesComponent } from './pages/lista-clientes/lista-clientes.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ListafallasComponent } from './pages/listafallas/listafallas.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { GraficsComponent } from './pages/grafics/grafics.component';
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import { ListafallasComponent } from './pages/listafallas/listafallas.component'
     FooterComponent,
     ListaClientesComponent,
     ListafallasComponent,
+    GraficsComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import { ListafallasComponent } from './pages/listafallas/listafallas.component'
     HttpClientModule,
     MaterialModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    NgxChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
