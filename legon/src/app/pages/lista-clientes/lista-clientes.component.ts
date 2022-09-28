@@ -3,6 +3,8 @@ import { Cliente } from 'src/app/class/cliente';
 import { Router } from '@angular/router';
 import { ClienteService } from 'src/app/services/cliente.service';
 
+
+
 @Component({
   selector: 'clientes',
   templateUrl: './lista-clientes.component.html',
@@ -10,18 +12,45 @@ import { ClienteService } from 'src/app/services/cliente.service';
 })
 export class ListaClientesComponent implements OnInit {
 
-  constructor(private clienteservice:ClienteService ,private router: Router) { }
-
   clientes: Cliente [];
+  aux: any;
+
+  constructor(private clienteservice:ClienteService ,private router: Router) { }
 
   ngOnInit(): void {
     this.getListClientes();
+    console.log(this.getKpi1());
   }
 
   private getListClientes (){
-    this.clienteservice.getClienteList().subscribe(dato => {
+    this.clienteservice.getClienteList().subscribe((dato: any) => {
       this.clientes = dato;
-    });
+        
+    }); 
+
   }
+
+  private getKpi1() {
+    let mesActual = 0;
+    let mesAnterior = 0;
+    this.clienteservice.getClienteList().subscribe(dato => {
+      
+
+      dato.forEach((d:any) => {
+
+      if ("/07/2022" === d.fecha_de_afliliacion.slice(2, 10)) {
+        mesAnterior += 1;
+      } 
+
+      if ("/08/2022" === d.fecha_de_afliliacion.slice(2, 10)) {
+        mesActual +=1;
+      }   
+      });
+
+      this.aux = ((mesActual - mesAnterior)/mesActual) * 100; 
+
+    })
+  }
+
 
 }
