@@ -1,4 +1,5 @@
 <div>
+  <h2>Indicador de TRF ( tiempo de respuesta a fallos)</h2>
     <ngx-charts-bar-vertical
   [view]="view"
   [scheme]="colorScheme"
@@ -13,4 +14,8 @@
   [yAxisLabel]="yAxisLabel"
   (select)="onSelect($event)">
 </ngx-charts-bar-vertical>
+  </div>
+  <div>
+    <label>Resultado del KPI 02 (Julio - Agosto)</label>
+    <h3>{{resultado_kpi2}}</h3>
   </div>

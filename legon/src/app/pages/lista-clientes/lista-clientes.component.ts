@@ -15,14 +15,14 @@ export class ListaClientesComponent implements OnInit {
   clientes: Cliente [];
   aux: any;
 
-  constructor(private clienteservice:ClienteService ,private router: Router) { }
+  constructor(public clienteservice:ClienteService ,public router: Router) { }
 
   ngOnInit(): void {
     this.getListClientes();
     console.log(this.getKpi1());
   }
 
-  private getListClientes (){
+  public getListClientes (){
     this.clienteservice.getClienteList().subscribe((dato: any) => {
       this.clientes = dato;
         
@@ -30,7 +30,7 @@ export class ListaClientesComponent implements OnInit {
 
   }
 
-  private getKpi1() {
+  public getKpi1() {
     let mesActual = 0;
     let mesAnterior = 0;
     this.clienteservice.getClienteList().subscribe(dato => {

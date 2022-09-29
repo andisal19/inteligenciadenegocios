@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ListafallasComponent } from './pages/listafallas/listafallas.component';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
 import { GraficsComponent } from './pages/grafics/grafics.component';
+import { Grafic01Component } from './pages/grafic01/grafic01.component';
 
 
 @NgModule({
@@ -25,6 +26,7 @@ import { GraficsComponent } from './pages/grafics/grafics.component';
     ListaClientesComponent,
     ListafallasComponent,
     GraficsComponent,
+    Grafic01Component,
   ],
   imports: [
     BrowserModule,
